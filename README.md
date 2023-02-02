@@ -28,6 +28,9 @@ Both models are trained with the Adam optimization algorithm with L2 regularizat
 The RoBERTa decoder is trained on the dataset captions in order to get all the relevant words that could describe the images in the best way possible.
 
 # Dataset and Benchmark
+
+![My Imaged](flicker.png)
+
 In this project, we used the Flickr8K dataset, which is available for free and consists of 8,000 images, each of which is paired with five different captions that provide a clear description. Given its small size, compared to other datasets, Flickr8K allows the model to be trained despite the average performing hardware. We splitted our dataset in:
 ●	5664 examples for train
 ●	1213 for validation
