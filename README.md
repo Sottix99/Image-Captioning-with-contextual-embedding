@@ -8,7 +8,11 @@ This Repository refers to the Final Project of the course Advanced Machine Learn
 * Carolina Romani 
 
 # Abstract
+![My Imaged](vit.png)
+
 In our project, we presented an image captioning model based on the use of an encoder/decoder architecture. In particular, we used for the encoder a ViT (Vision Transformer) pretrained on ImageNet21k and for the decoder a RoBERTa model pretrained on english raw texts, both fine tuned on Flickr8k dataset. Our model was able to generate reasonable textual descriptions of images only when the subjects of the images were animals, in particular dogs, or humans.
+
+![My Imaged](The-RoBERTa-model-architecture (1).png)
 
 # Introduction
 Image captioning combines two tasks that belong to different area of machine learning: natural language processing and computer vision. In practice, image captioning is a task that consists in generating a textual description from an image. This method is useful to increase the accessibility of images for people with visual disabilities and to allow image comprehension systems to better understand the content of images.
