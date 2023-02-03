@@ -38,9 +38,10 @@ The RoBERTa decoder is trained on the dataset captions in order to get all the r
 ![My Imaged](Pictures/flicker.png)
 
 In this project, we used the Flickr8K dataset, which is available for free and consists of 8,000 images, each of which is paired with five different captions that provide a clear description. Given its small size, compared to other datasets, Flickr8K allows the model to be trained despite the average performing hardware. We splitted our dataset in:
-●	5664 examples for train
-●	1213 for validation
-●	The others for test
+
+*	5664 examples for train
+*	1213 for validation
+*	The others for test
 
 # Experimental results
 During the training we can see a slow decrease of the loss on the training set, while in the validation, around the tenth epoch, the loss begins to increase slowly. This is a usual behavior when the model is overfitting. To avoid this we tried to change different hyperparameters such as learning rate, weight decay and the batch size within the limits of our hardware. Unfortunately none of these approaches solved the issue. One way to overcome this problem could be to work with a larger dataset, since it is proved that in general having more data helps the model to better generalize. Moreover our architecture is transformer based and for this reason having more data could be even more helpful.
