@@ -1,4 +1,6 @@
 # Image Captioning with contextual embedding
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
 This Repository refers to the Final Project of the course Advanced Machine Learning (AML) at University Sapienza of Rome 2022/2023.
 
 ## Group members:
