@@ -2,10 +2,10 @@
 This Repository refers to the Final Project of the course Advanced Machine Learning (AML) at University Sapienza of Rome 2022/2023.
 
 ## Group members:
-* Alessandro Sottile
-* Francesco Sciarra
-* Giacomo Scarponi 
 * Carolina Romani 
+* Giacomo Scarponi
+* Francesco Sciarra 
+* Alessandro Sottile
 
 # Abstract
 
