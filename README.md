@@ -61,7 +61,7 @@ During the training we can see a slow decrease of the loss on the training set, 
 Image captioning can be consider as a non trivial task given the fact that it lies in the intersection between two different fields that are computer vision that addresses images, and natural language processing that addresses words. Effectively our model is performing poorly as already shown in the previous paragraph. We believe that training the model on a larger dataset, could help the model to better generalize and consequently to increase performances on this task. Another major change could be to use a Swin Transformer as backbone for the model, since it is proved that Swin Transformer outperforms Vision Transformer in many tasks such as object detection and semantic segmentation.
 
 # References
-* [Image_Captioning_using_Hugging_Face (https://github.com/kalpesh22-21/Image_Captioning_using_Hugging_Face)]
+* [Image_Captioning_using_Hugging_Face] (https://github.com/kalpesh22-21/Image_Captioning_using_Hugging_Face)
 * Dosovitskiy et al, “An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale” (2020)
 * Wang et al, “BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model” (2019)
 * Xu et al, “Show, Attend and Tell: Neural Image Caption Generation with Visual Attention”, ICML (2015)
