@@ -8,11 +8,8 @@ This Repository refers to the Final Project of the course Advanced Machine Learn
 * Carolina Romani 
 
 # Abstract
-![My Imaged](vit.png)
-
 In our project, we presented an image captioning model based on the use of an encoder/decoder architecture. In particular, we used for the encoder a ViT (Vision Transformer) pretrained on ImageNet21k and for the decoder a RoBERTa model pretrained on english raw texts, both fine tuned on Flickr8k dataset. Our model was able to generate reasonable textual descriptions of images only when the subjects of the images were animals, in particular dogs, or humans.
 
-![My Imaged](roberta.png)
 
 # Introduction
 Image captioning combines two tasks that belong to different area of machine learning: natural language processing and computer vision. In practice, image captioning is a task that consists in generating a textual description from an image. This method is useful to increase the accessibility of images for people with visual disabilities and to allow image comprehension systems to better understand the content of images.
@@ -22,10 +19,16 @@ Dosovitskiy et al (2021) proved that Vision Transformer obtains excellent result
 
 # Proposed method explained
 Image captioning could be seen as a sequence to sequence problem, meaning that we can treat the starting image as a sequence and, from this sequence, we can generate a human readable sentence, which effectively is another sequence. To do so, we decided to adopt an encoder/decoder architecture, which is really suitable to solve seq2seq problems.
-The encoder part of our architecture is a Vison Transformer, which is proved to be superior to the convolutional neural network when it comes to many computer vision tasks such as image detection or image classification. Basically vision transformer project the 2d image to a one dimensional space, dividing the original image in different patches of the same size. These patches are the treated as it were a normal sequence from a base transformer encoder. The advantage of splitting the original image into patches is that we loose part of the inductive bias that we had on convolutional neural network, because we are now considering the image as a sequence and not as a 2D structure. We adopted a pre-trained ViT on the imagenet21k dataset, which is a large collection of 14 millions images divided in 21841 classes. The pretrained ViT is intended to be used for a classification task, so we did minor changes to the model to make it suitable to our task. In addition to that, during the training phase we frozen the first 5 out of 12 layers to avoid the loss of high level feature learned from the pre-training of the model. Doing so, the encoder is able to encode the image into a sequence that is usable to the decoder part.
+The encoder part of our architecture is a Vison Transformer, which is proved to be superior to the convolutional neural network when it comes to many computer vision tasks such as image detection or image classification. Basically vision transformer project the 2d image to a one dimensional space, dividing the original image in different patches of the same size. These patches are the treated as it were a normal sequence from a base transformer encoder. The advantage of splitting the original image into patches is that we loose part of the inductive bias that we had on convolutional neural network, because we are now considering the image as a sequence and not as a 2D structure. We adopted a pre-trained ViT on the imagenet21k dataset, which is a large collection of 14 millions images divided in 21841 classes. 
+
+![My Imaged](vit.png)
+
+The pretrained ViT is intended to be used for a classification task, so we did minor changes to the model to make it suitable to our task. In addition to that, during the training phase we frozen the first 5 out of 12 layers to avoid the loss of high level feature learned from the pre-training of the model. Doing so, the encoder is able to encode the image into a sequence that is usable to the decoder part.
 The decoder is pretrained RoBERTa model, which basically is a BERT model but trained on more data with larger batch size, with dynamic masking instead of static masking and it was trained only on the language modeling task.
 Both models are trained with the Adam optimization algorithm with L2 regularization, which is a technique that helps the model to avoid overfitting. In addition to that we also added a very low dropout rate to the self attention and feedforward layers that helps prevent overfitting aswell.
 The RoBERTa decoder is trained on the dataset captions in order to get all the relevant words that could describe the images in the best way possible.
+
+![My Imaged](roberta.png)
 
 # Dataset and Benchmark
 
